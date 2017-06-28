@@ -11,3 +11,8 @@ body{
 .inside{
 	margin:5%;
 }
+#Countdown{
+	font-family: 'Poppins', sans-serif;
+	text-align: center;
+	font-size: 200%;
+}
