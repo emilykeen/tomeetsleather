@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="./CSS/style.css">
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
 </head>
 
 <body>
@@ -25,10 +26,10 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a href="./home.html">Home </a></li>
-                    <li><a href="./podcasts.html">Podcasts</a></li>
-                    <li class="active"><a href="./Blogs.html">Blogs<span class="sr-only">(current)</span></a></li>
-                    <li><a href="./AboutUs.html">About us</a></li>
+                    <li class="active"><a href="/">Home <span class="sr-only">(current)</span></a></li>
+                    <li><a href="/podcasts">Podcasts</a></li>
+                    <li><a href="/blogs">Blogs</a></li>
+                    <li><a href="/aboutUs">About us</a></li>
             </div>
             <!-- /.navbar-collapse -->
         </div>
@@ -38,32 +39,52 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <img width="150px" height="150px" src="Toemeetsleather-1.png">
+                    <img width="150px" height="150px" src="../images/Toemeetsleather-1.png">
                 </div>
                 <div class="col-md-8">
                     <h1 id="title">Toe Meets Leather</h1></div>
             </div>
         </div>
     </div>
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h3 class="panel-title">Blogs</h3>
-        </div>
-        <div class="panel-body">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">October 2016</h3>
-                </div>
-                <div class="panel-body">
-                    <div class="list-group">
-                        <button type="button" class="list-group-item">
-                            <a href="./Blog/Oct11-2016.html">Why Sports Protests are Important</a>
-                        </button>
-                    </div>
+    <div class="container">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div id="Countdown">Countdown to 2017 College Football Season:
+                    <br>
+                    <p id="timer"></p>
                 </div>
             </div>
         </div>
     </div>
 </body>
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Aug 26, 2017 14:30:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+    // Get todays date and time
+    var now = new Date().getTime();
+
+    // Find the distance between now an the count down date
+    var distance = countDownDate - now;
+
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Display the result in the element with id="demo"
+    document.getElementById("timer").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+    // If the count down is finished, write some text 
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("timer").innerHTML = "EXPIRED";
+    }
+}, 1000);
+</script>
 
 </html>
