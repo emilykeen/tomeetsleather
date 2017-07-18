@@ -16,3 +16,12 @@ body{
 	text-align: center;
 	font-size: 200%;
 }
+.blogTitle{
+	background:green;
+	text-align: center;
+	position: relative;
+	top:-10%;
+}
+.blogImage{
+text-align: center;
+}

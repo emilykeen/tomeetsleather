@@ -33,10 +33,10 @@ module.exports = function(app) {
         res.sendFile(path.join(__dirname, "/../public/html/Blog/July3012016.html"));
     });
     app.get("/blogs/Jul-28-2016", function(req, res) {
-        res.sendFile(path.join(__dirname, "/../public/html/Blog/Jul282016.html"));
+        res.sendFile(path.join(__dirname, "/../public/html/Blog/July282016.html"));
     });
     app.get("/blogs/Jul-24-2016", function(req, res) {
-        res.sendFile(path.join(__dirname, "/../public/html/Blog/Jul242016.html"));
+        res.sendFile(path.join(__dirname, "/../public/html/Blog/July242016.html"));
     });
     // If no matching route is found default to home
     app.get('/', function(req, res) {
